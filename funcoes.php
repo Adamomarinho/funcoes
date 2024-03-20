@@ -1,5 +1,8 @@
 <?php
 
+// Deve-se baixar a biblioteca PHPmailer para utilizar este arquivo, para envio de emails
+// Deve-se baixar a biblioteca Dompdf para utilizar este arquivo, para gerar arquivos PDF
+
 require 'vendor/autoload.php';
 use PHPMailer\PHPMailer\PHPMailer;
 use PHPMailer\PHPMailer\SMTP;
@@ -20,7 +23,7 @@ class sistema
 
     protected $conexao;
     private $db_host = 'localhost';
-    private $db_bd = 'sgsv3';
+    private $db_bd = 'tabela';
     private $db_usuario = 'root';
     private $db_senha = '';
     private $carac = 'utf8';
