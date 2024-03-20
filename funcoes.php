@@ -38,11 +38,11 @@ class sistema
         try 
         {
             $this->conexao = new PDO("mysql:host=$this->db_host;dbname=$this->db_bd;charset=$this->carac;", $this->db_usuario, $this->db_senha);
-            alerta('success','Conectado com sucesso');
+            mensagem('success','Conectado com sucesso');
         } 
         catch (PDOException $e) 
         {
-            alerta('danger','Erro ao conectar com o banco de dados: ' .$e->getMessage());
+            mensagem('danger','Erro ao conectar com o banco de dados: ' .$e->getMessage());
             die();
         }
     }
@@ -126,12 +126,12 @@ class Email
             $mail->Body = $corpo;
             if (!$mail->send()) 
             {
-                alerta('danger','Mensagem de erro: ' . $mail->ErrorInfo);
+                mensagem('danger','Mensagem de erro: ' . $mail->ErrorInfo);
                 return true;
             } 
             else 
             {
-               alerta('success','Email enviado com sucesso');
+               mensagem('success','Email enviado com sucesso');
                redireciona(5, 'postagem.php?id=' . $id);
                return false;
             } 
@@ -148,11 +148,11 @@ class Email
 //  $removerpasta = clsArquivo::removerDiretorio($pasta_teste, true);
 //  if($removerpasta)
 //  {
-//  	alerta('success', 'Pasta removida com sucesso');
+//  	mensagem('success', 'Pasta removida com sucesso');
 //  }
 //  else
 //  {
-//	  alerta('danger', 'Não foi possivel remover a  pasta');
+//	  mensagem('danger', 'Não foi possivel remover a  pasta');
 //  }
 
 class clsArquivo
