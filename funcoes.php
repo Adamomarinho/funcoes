@@ -2,6 +2,7 @@
 
 // Deve-se baixar a biblioteca PHPmailer para utilizar este arquivo, para envio de emails
 // Deve-se baixar a biblioteca Dompdf para utilizar este arquivo, para gerar arquivos PDF
+// Deve-se baixar a biblioteca Bootstrap para utilizar este arquivo para utilizar a função mensagem
 
 require 'vendor/autoload.php';
 use PHPMailer\PHPMailer\PHPMailer;
